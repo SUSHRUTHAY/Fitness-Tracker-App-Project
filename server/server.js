@@ -7,15 +7,8 @@ const authRoutes = require('./routes/auth');
 const entriesRoutes = require('./routes/entries');
 
 const app = express();
-app.use(cors(
-    {
-        origin: ["https://fitness-tracker-app-project.vercel.app"],
-        methods: ["POST","GET"],
-        credentials: true
-    }
-));
+app.use(cors());
 app.use(bodyParser.json());
-mongoose.connect('mongodb+srv://sushrutha22bce20392:Usv8zIH7iq4TkqDt@cluster0.gkpzr7p.mongodb.net/sushrutha22bce20392?retryWrites=true&w=majority&appName=Cluster0');
 
 mongoose.connect('mongodb://0.0.0.0:27017/fitness-tracker', {
     useNewUrlParser: true,
