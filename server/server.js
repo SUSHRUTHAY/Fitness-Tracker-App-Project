@@ -12,7 +12,7 @@ mongoose.connect('mongodb://0.0.0.0:27017/fitness-tracker', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
-    console.log('Connected to MongoDB');
+    console.log('Successfully connected to MongoDB');
 }).catch((err) => {
     console.error('Error connecting to MongoDB', err);
 });
